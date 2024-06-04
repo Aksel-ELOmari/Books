@@ -1,0 +1,163 @@
+html,*{padding: 0;margin: 0;}
+:root
+{
+    --Text-color:#fff;
+    --Bg-color:#1a1414;
+    --Colred:orange;
+    --Orangered:orangered;
+}
+
+/* Star Global Variables */
+.countainer{max-width: 90%;margin: 0 auto};
+
+.flex,
+.flex-column,
+.flex-center,
+.flex-between,
+.flex-around,
+.flex-evenly{display: flex;align-items: center;}
+.flex-between{justify-content: space-between;}
+.flex-around{justify-content: space-around;}
+.flex-evenly{justify-content: space-evenly;}
+.flex-column{flex-direction: column;}
+
+a{text-align: none;color: var(--Text-color);}
+.my-1{margin: 1rem auto;}
+.my-2{margin: 2rem auto;}
+.text-center{text-align: center;}
+.orangred{color: var(--Orangered);}
+.scroller-y::-webkit-scrollbar{background: transparent;width: 6px;border-radius: 20px;}
+.scroller-y::-webkit-scrollbar-thumb{background: transparent;width: 6px;border-radius: 20px;}
+.scroller-x::-webkit-scrollbar{background: transparent;height: 6px;border-radius: 20px;}
+.scroller-x::-webkit-scrollbar-thumb{background: transparent;height: 6px;border-radius: 20px;}
+/* End Global Variables */
+
+body
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    min-height:100vh;
+    min-height:100dvh;
+    width: 100vw;
+    background: var(--Bg-color);
+    overflow-x: hidden;
+    color: var(--Text-color);
+    scroll-behavior: smooth;
+}
+
+/*? (* End Styling the Header section *) */
+header h1 a{text-decoration: none;}
+header nav
+{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.under-logo{font: outline;font-weight: lighter;}
+.header-inner
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+.main-desc
+{
+    color: var(--Text-color);
+    font-size:3.5rem;
+    font-weight: bolder;
+}
+@media (min-width:786px)
+{
+    .header-inner-img img
+    {
+        height: 22rem;
+    }
+}
+@media (max-width:700px){
+    .Carousel-inner{gap: 0rem;}
+    header .header-footer{height: 6rem;}
+}
+.SearchBox input{
+    outline: 0;
+    border: 0;
+    background: transparent;
+    color: var(--Text-color);
+    transition: .3s linear;
+    padding: 0 20px;
+}
+.SearchBox input::placeholder{color: rgb(155, 146, 105);font-style: italic;}
+.SearchBox input:focus{color: var(--Bg-color);background: var(--Text-color);}
+.SearchBox .search-part,.SearchBox  .Searchicon 
+{
+    height: 2.5rem;
+    height: 2.5rem;
+    border: solid 1px var(--Text-color);
+    margin: 0 .4rem;
+}
+header .header-footer
+{
+    height: 12rem;
+    width: 100%;
+    display: flex;
+    align-items: center;justify-content: space-between;
+    gap: 1rem;
+}
+.Vertical{writing-mode: vertical-lr;}
+.Carousel{width: 90%;}
+.Carousel-inner
+{
+    position: relative;height: 98%;width: 100%;
+    display: flex;
+    align-items: center;gap: 4rem;
+    overflow: scroll hidden;
+    padding: 3rem;
+}
+.Carousel-inner .Card{
+    height: 100%;
+    min-width: 8rem;
+    position: relative;
+    box-shadow: 4px 0px 20px #ffffff38;
+}
+@media (min-width:786px){
+    .Carousel-inner .Card .Card-before
+    {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        translate: -50% -60%;
+        font-size: 6rem;
+        font-weight: bolder;
+        /* background: linear-gradient(56deg,rgb(116, 54, 54),rgb(58, 58, 11)); */
+        background: rgba(128, 128, 128, 0.719);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+@media (max-width:767px){
+    /* .Carousel-inner .Card .Card-before{display: none;} */
+}
+.Carousel-inner .Card img{
+    position: absolute;top: 0;left: 0;
+    height: 100%;width: 100%;object-fit: cover;
+    border-radius: 12px;
+}
+
+
+/*? (* End Styling the Header section *) */
+
+@media (max-width:700px){
+    .header-inner-img img
+    {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+    .Carousel-inner{-webkit-backdrop-filter: blur(30px);backdrop-filter: blur(30px);}
+    header .header-footer{height: 7rem;}
+    .Carousel-inner .Card{width: 2rem;}
+}
